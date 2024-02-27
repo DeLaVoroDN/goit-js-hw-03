@@ -1,10 +1,15 @@
-'use strict';
+'use strict'; // Строгий режим, который помогает выявить и предотвратить ошибки в коде
+
 function slugify(title) {
-  const lowerTitle = title.toLowerCase();
-  const splitTitle = lowerTitle.split(' ');
-  return splitTitle.join('-');
+  // Функция для преобразования заголовка в URL-подобную строку (slug)
+
+  const lowerTitle = title.toLowerCase(); // Преобразование заголовка в нижний регистр
+  const splitTitle = lowerTitle.split(' '); // Разделение заголовка на отдельные слова по пробелам
+  return splitTitle.join('-'); // Объединение слов с помощью дефисов и возврат результата
 }
-console.log(slugify('Arrays for begginers')); // "arrays-for-begginers"
-console.log(slugify('English for developer')); // "english-for-developer"
-console.log(slugify('Ten secrets of JavaScript')); // "ten-secrets-of-javascript"
-console.log(slugify('How to become a JUNIOR developer in TWO WEEKS')); // "how-to-become-a-junior-developer-in-two-weeks"
+
+// Вывод результатов вызова функции для нескольких различных заголовков
+console.log(slugify('Arrays for begginers')); // Преобразует заголовок в URL-подобную строку и выводит результат
+console.log(slugify('English for developer')); // Преобразует заголовок в URL-подобную строку и выводит результат
+console.log(slugify('Ten secrets of JavaScript')); // Преобразует заголовок в URL-подобную строку и выводит результат
+console.log(slugify('How to become a JUNIOR developer in TWO WEEKS')); // Преобразует заголовок в URL-подобную строку и выводит результат
